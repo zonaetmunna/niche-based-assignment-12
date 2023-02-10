@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 import { Container, Grid } from '@mui/material';
 
 
-const ManageOrders = () => {
+const AllOrders = () => {
 
      const [products, setProducts] = useState([])
      useEffect(() => {
@@ -61,4 +61,4 @@ const ManageOrders = () => {
      );
 };
 
-export default ManageOrders;
+export default AllOrders;

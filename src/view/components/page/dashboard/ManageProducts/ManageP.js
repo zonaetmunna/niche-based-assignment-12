@@ -1,7 +1,7 @@
 import { Button, Container, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
-const ManageProducts = () => {
+const ManageP = () => {
 
      const [products, setProducts] = useState([]);
      useEffect(() => {
@@ -71,4 +71,4 @@ const ManageProducts = () => {
      );
 };
 
-export default ManageProducts;
+export default ManageP;

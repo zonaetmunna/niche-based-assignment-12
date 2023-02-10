@@ -15,10 +15,10 @@ import MyOrders from '../../components/page/dashboard/MyOrders/MyOrders';
 import ReviewUser from '../../components/page/dashboard/ReviewUser/ReviewUser';
 import Payment from '../../components/page/dashboard/Payment/Payment';
 import AdminRoute from '../../components/AdminRoute/AdminRoute';
-import ManageAllOrders from '../../components/page/dashboard/ManageAllOrders/ManageAllOrders';
+import AllOrders from '../../components/page/dashboard/ManageAllOrders/AllOrders';
 import AddProduct from '../../components/page/dashboard/AddProduct/AddProduct';
 import MakeAdmin from '../../components/page/dashboard/MakeAdmin/MakeAdmin';
-import ManageProducts from '../../components/page/dashboard/ManageProducts/ManageProducts';
+import ManageP from '../../components/page/dashboard/ManageProducts/ManageP';
 import useAuth from '../../../hooks/useAuth';
 
 const drawerWidth = 200;
@@ -152,7 +152,7 @@ function Dashboard(props) {
                                    <Payment />
                               </Route>
                               <AdminRoute path={`${path}/manageAllOrders`}>
-                                   <ManageAllOrders />
+                                   <AllOrders />
                               </AdminRoute>
                               <AdminRoute path={`${path}/addProduct`}>
                                    <AddProduct />
@@ -161,7 +161,7 @@ function Dashboard(props) {
                                    <MakeAdmin />
                               </AdminRoute>
                               <AdminRoute path={`${path}/manageProducts`}>
-                                   <ManageProducts />
+                                   <ManageP />
                               </AdminRoute>
                          </Switch>
                          {/* </Grid> */}
