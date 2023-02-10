@@ -1,0 +1,72 @@
+[
+     {
+          "name": "Demo product title",
+          "tags": "gold, gray, l, m, magenta",
+          "price": "80.00",
+          "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters",
+          "image": "https://i.ibb.co/CB3Bq8s/product-1.jpg"
+     },
+     {
+          "name": "Reprizo Gold Dial Watch",
+          "tags": "lather",
+          "price": "540.00",
+          "description": "If this product is sold by Amazon, please review the manufacturer’s website for warranty information. If this product is sold by another party, please contact the seller directly for warranty information for this product",
+          "image": "https://i.ibb.co/hWpGgC0/product-2.png"
+     },
+     {
+          "name": "Fastrack Men’s Watch",
+          "tags": "lather",
+          "price": "420.00",
+          "description": "Long renowned for its Japanese sensibility, the Presage collection now reveals its feminine side in a series of three automatic watches that all have enamel dials. The series is spearheaded by a limited edition with a dial inspired by the crescent moon on a winter’s evening.All three dials",
+          "image": "https://i.ibb.co/DLgkk4L/product-3.png"
+     },
+     {
+          "name": "Lawson Franklin 44 Men’s Watch",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "Yokosawa has been making enamel dials for Seiko for nearly a decade and several Presage watches already feature his craftsmanship. The team’s skill is evident in the beauty, depth and texture of the enamel and the warm, soft sheen of each dial. The secret of the longevity and delicacy of each dia ",
+          "image": "https://i.ibb.co/94Sr4pF/product-5.jpg"
+     },
+     {
+          "name": "Sky-Dweller",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "The limited edition watch has a deep blue dial decorated with a delicate crescent moon shape on the right side, from twelve to eight o’clock. Where the indexes fall inside the crescent motif on the dial, they are picked",
+          "image": "https://i.ibb.co/cgTHXnZ/product-10.jpg"
+     },
+     {
+          "name": "Day-Date",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "Every aspect of the design and manufacture reflects the care and craftsmanship for which Presage is renowned. All three watches are powered by Seiko’s trusted mechanical Caliber 6R31, which delivers a power reserve of 70 hours. The crystal glass is a dual-curved sapphire and is treated",
+          "image": "https://i.ibb.co/CzLYFW6/product-11.jpg"
+     },
+     {
+          "name": "Lawson Franklin 44 Men’s Watch",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using , making it look like readable English.",
+          "image": "https://i.ibb.co/xhMM88f/product-9.jpg"
+     },
+     {
+          "name": "Lawson Franklin 44 Men’s Watch",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using , making it look like readable English.",
+          "image": "https://i.ibb.co/Y388h1n/product-8.jpg"
+     },
+     {
+          "name": "Lawson Franklin 44 Men’s Watch",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using , making it look like readable English.",
+          "image": ""
+     },
+     {
+          "name": "Lawson Franklin 44 Men’s Watch",
+          "tags": "silicon",
+          "price": "310.00",
+          "description": "Automatic hand position alignment functionDay displayDST (Daylight Saving Time) Dual-time function  Function to prevent the GPS signal reception (in-flight mode  GPS signal reception function(Time zone adjustment, automatic time adjustmen manuaadjustmenOvercharge prevention function ",
+          "image": "https://i.ibb.co/fDb6L66/product-7.jpg"
+     }
+]
