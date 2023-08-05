@@ -6,6 +6,7 @@ import useAuth from '../../../../../hooks/useAuth';
 const MakeAdmin = () => {
      const [email, setEmail] = useState('')
      const { token } = useAuth();
+     const [success, setSuccess]=useState(false)
 
      const handleOnBlur = e => {
           setEmail(e.target.value);

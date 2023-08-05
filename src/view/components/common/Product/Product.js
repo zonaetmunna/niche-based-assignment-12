@@ -1,23 +1,24 @@
-import { Grid  } from '@mui/material';
-import React from 'react';
+import { Grid } from '@mui/material';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useHistory } from 'react-router';
-import { useTheme,makeStyles } from '@mui/styles';
+import { makeStyles, useTheme } from '@mui/styles';
+import React from 'react';
+import { useNavigate } from "react-router-dom";
 
  
 const Product = ({ product }) => {
      const { _id, name, tags, image, description, price } = product;
-     const history = useHistory();
+     const navigate = useNavigate();
+
 
 
      const handleGoPurchase = () => {
           const url = `/purchase/${_id}`;
-          history.push(url)
+          navigate(url)
      }
 
      const theme = useTheme();

@@ -1,24 +1,16 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Button, Container } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Button, Container, Grid } from '@mui/material';
-import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
-import MyOrders from '../../components/page/dashboard/MyOrders/MyOrders';
-import ReviewUser from '../../components/page/dashboard/ReviewUser/ReviewUser';
-import Payment from '../../components/page/dashboard/Payment/Payment';
-import AdminRoute from '../../components/AdminRoute/AdminRoute';
-import AllOrders from '../../components/page/dashboard/ManageAllOrders/AllOrders';
-import AddProduct from '../../components/page/dashboard/AddProduct/AddProduct';
-import MakeAdmin from '../../components/page/dashboard/MakeAdmin/MakeAdmin';
-import ManageP from '../../components/page/dashboard/ManageProducts/ManageP';
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Link, Outlet } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 
 const drawerWidth = 200;
@@ -27,9 +19,8 @@ function Dashboard(props) {
      const { window } = props;
      const [mobileOpen, setMobileOpen] = React.useState(false);
 
-     // nested route
-     const { path, url } = useRouteMatch();
-     // 
+    
+ 
      const { user, admin, logOut } = useAuth();
 
      const handleDrawerToggle = () => {
@@ -45,27 +36,27 @@ function Dashboard(props) {
                     <Link to="/home" style={{ textDecoration: 'none' }} >Home</Link>
                     <br />
                     {admin ? <Box>
-                         <Link to={`${url}/manageAllOrders`} style={{ textDecoration: 'none' }} >Manage all order</Link>
+                         <Link to="/manageAllOrders" style={{ textDecoration: 'none' }} >Manage all order</Link>
                          <br />
-                         <Link to={`${url}/addProduct`} style={{ textDecoration: 'none' }} >Add Product</Link>
+                         <Link to="/addProduct" style={{ textDecoration: 'none' }} >Add Product</Link>
                          <br />
-                         <Link to={`${url}/makeAdmin`} style={{ textDecoration: 'none' }} >Make Admin</Link>
+                         <Link to="/makeAdmin" style={{ textDecoration: 'none' }} >Make Admin</Link>
                          <br />
-                         <Link to={`${url}/manageProducts`} style={{ textDecoration: 'none' }} >Manage Products</Link>
+                         <Link to="/manageProducts" style={{ textDecoration: 'none' }} >Manage Products</Link>
                     </Box> :
                          <Box>
 
-                              <Link to={`${url}`} style={{ textDecoration: 'none' }} >MyOrders</Link>
+                              <Link to="/myOrders" style={{ textDecoration: 'none' }} >MyOrders</Link>
                               <br />
 
-                              <Link to={`${url}/reviewUser`} style={{ textDecoration: 'none' }} >Review</Link>
+                              <Link to="/reviewUser" style={{ textDecoration: 'none' }} >Review</Link>
                               <br />
-                              <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} >Pay</Link>
+                              <Link to="/payment" style={{ textDecoration: 'none' }} >Pay</Link>
                               <br />
                          </Box>
                     }
 
-                    <Link to={`${url}/payment`} style={{ textDecoration: 'none' }} ><Button onClick={logOut} color="inherit">Logout</Button></Link>
+                    <Link to="/payment" style={{ textDecoration: 'none' }} ><Button onClick={logOut} color="inherit">Logout</Button></Link>
                </Box>
 
           </div>
@@ -141,29 +132,9 @@ function Dashboard(props) {
                          <Toolbar />
                          {/*  */}
                          {/* <Grid xs={12}> */}
-                         <Switch>
-                              <Route exact path={path}>
-                                   <MyOrders />
-                              </Route>
-                              <Route path={`${path}/reviewUser`}>
-                                   <ReviewUser />
-                              </Route>
-                              <Route path={`${path}/payment`}>
-                                   <Payment />
-                              </Route>
-                              <AdminRoute path={`${path}/manageAllOrders`}>
-                                   <AllOrders />
-                              </AdminRoute>
-                              <AdminRoute path={`${path}/addProduct`}>
-                                   <AddProduct />
-                              </AdminRoute>
-                              <AdminRoute path={`${path}/makeAdmin`}>
-                                   <MakeAdmin />
-                              </AdminRoute>
-                              <AdminRoute path={`${path}/manageProducts`}>
-                                   <ManageP />
-                              </AdminRoute>
-                         </Switch>
+                         <Outlet/>
+                              
+                         
                          {/* </Grid> */}
 
                     </Box>

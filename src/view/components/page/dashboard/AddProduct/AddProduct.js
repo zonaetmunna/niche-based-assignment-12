@@ -1,4 +1,4 @@
-import { Container, Grid, Typography ,Input,Button} from '@mui/material';
+import { Container, Grid, Input, Typography } from '@mui/material';
 import React from 'react';
 import { useForm } from "react-hook-form";
 
@@ -15,7 +15,7 @@ const AddProduct = () => {
                headers: {
                     'content-type': 'application/json'
                },
-               body: JSON.stringify(addedProduct)
+               body: JSON.stringify(data)
           })
                .then(res => res.json())
                .then(data => {

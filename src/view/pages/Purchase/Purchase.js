@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import Grid from '@mui/material/Grid';
+import { Container } from '@mui/material';
+import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { useHistory, useParams } from 'react-router';
-import { Container } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from 'react-router';
 import useAuth from '../../../hooks/useAuth';
 
 
 const Purchase = () => {
      const { id } = useParams();
      const { user } = useAuth();
-     const history = useHistory();
+     const navigate = useNavigate();
      // product state
      const [product, setProduct] = useState({})
      useEffect(() => {
@@ -48,7 +48,7 @@ const Purchase = () => {
 
      // handle back to home page
      const handleBack = () => {
-          history.push('/home');
+          navigate('/home');
      }
 
 

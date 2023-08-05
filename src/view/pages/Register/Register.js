@@ -1,12 +1,12 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
      const [loginData, setLoginData] = useState({})
      const { user, registerUser, isLoading, error } = useAuth();
-     const history = useHistory();
+     const navigate = useNavigate();
 
      const handleOnBlur = e => {
           const field = e.target.name;
@@ -21,7 +21,7 @@ const Register = () => {
           if (loginData.password !== loginData.password2) {
                alert('password didnt match');
           }
-          registerUser(loginData.email, loginData.password, loginData.name, history)
+          registerUser(loginData.email, loginData.password, loginData.name, navigate)
 
      };
      
