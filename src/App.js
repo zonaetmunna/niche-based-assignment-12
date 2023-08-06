@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./view/components/PrivateRoute/PrivateRoute";
-import Header from "./view/components/common/Header/Header";
 import AddProduct from "./view/components/page/dashboard/AddProduct/AddProduct";
 import MakeAdmin from "./view/components/page/dashboard/MakeAdmin/MakeAdmin";
 import AllOrders from "./view/components/page/dashboard/ManageOrders/AllOrders";
@@ -18,47 +17,43 @@ import Register from "./view/pages/Register/Register";
 
 function App() {
   return (
-    <>
-      <AuthProvider>
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-
-            <Route path="/explore" element={<Explore />} />
-
-            <Route
-              path="/purchase/:id"
-              element={
-                <PrivateRoute>
-                  <Purchase />
-                </PrivateRoute>
-              }
-            />
-
-            <Route path="/login" element={<Login />} />
-
-            <Route path="/register" element={<Register />} />
-            <Route
-              path="/dashboard"
-              element={
-                <PrivateRoute>
-                  <Dashboard>
-                    <Route path="myOrders" element={<MyOrders />} />
-                    <Route path="reviewUser" element={<ReviewUser />} />
-                    <Route path="payment" element={<Payment />} />
-                    <Route path="manageAllOrders" element={<AllOrders />} />
-                    <Route path="addProduct" element={<AddProduct />} />
-                    <Route path="makeAdmin" element={<MakeAdmin />} />
-                    <Route path="manageProducts" element={<ManageP />} />
-                  </Dashboard>
-                </PrivateRoute>
-              }
-            />
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
-    </>
+    <AuthProvider>
+      <BrowserRouter>
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route
+            path="/purchase/:id"
+            element={
+              <PrivateRoute>
+                <Purchase />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          >
+            {/* Relative paths for nested routes */}
+            <Route path="myOrders" element={<MyOrders />} />
+            <Route path="reviewUser" element={<ReviewUser />} />
+            <Route path="payment" element={<Payment />} />
+            <Route path="manageAllOrders" element={<AllOrders />} />
+            <Route path="addProduct" element={<AddProduct />} />
+            <Route path="makeAdmin" element={<MakeAdmin />} />
+            <Route path="manageProducts" element={<ManageP />} />
+          </Route>
+        </Routes>
+        {/* <Footer /> */}
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

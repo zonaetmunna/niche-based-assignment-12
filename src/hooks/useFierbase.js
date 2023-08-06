@@ -55,7 +55,7 @@ const useFirebase = () => {
         const user = userCredential.user;
         setUser(user);
         setError("");
-        setSuccess(true); // Login success
+        setSuccess(true);
         // redirect location and history
         const destination = location?.state?.from || "/";
         history.replace(destination);
@@ -87,7 +87,7 @@ const useFirebase = () => {
     setIsLoading(true);
     signOut(auth)
       .then(() => {
-        setSuccess(false); // Logout success
+        setSuccess(false);
       })
       .catch((error) => {})
       .finally(() => setIsLoading(false));
@@ -96,7 +96,7 @@ const useFirebase = () => {
   // Get admin status
   useEffect(() => {
     if (user.email) {
-      const url = `https://niche-server-side-project-assignment-12-106e3p4jy-zonaetmunna.vercel.app/users/${user.email}`;
+      const url = `http://localhost:5000/users/${user.email}`;
       fetch(url)
         .then((res) => res.json())
         .then((data) => setAdmin(data.admin));
@@ -106,8 +106,7 @@ const useFirebase = () => {
   // saveUser
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    const url =
-      "https://niche-server-side-project-assignment-12-106e3p4jy-zonaetmunna.vercel.app/users";
+    const url = "http://localhost:5000/users";
     fetch(url, {
       method: method,
       headers: {
@@ -126,7 +125,7 @@ const useFirebase = () => {
     isLoading,
     admin,
     token,
-    success, // Include the success state in the returned object
+    success,
   };
 };
 

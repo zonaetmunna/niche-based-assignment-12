@@ -108,7 +108,7 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <NavLink to="/home" className={navItem}>
+              <NavLink to="/" className={navItem}>
                 {" "}
                 The Hands of Time
               </NavLink>

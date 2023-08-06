@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../components/common/Footer/Footer";
 import Banner from "../../components/page/home/Banner/Banner";
 import Discount from "../../components/page/home/Discount/Discount";
 import Products from "../../components/page/home/Products/Products";
@@ -12,7 +11,6 @@ const Home = () => {
       <Products />
       <Review />
       <Discount />
-      <Footer />
     </>
   );
 };
