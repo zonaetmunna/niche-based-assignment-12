@@ -11,7 +11,8 @@ import React, { useEffect, useState } from "react";
 const AllOrders = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:5000/orders";
+    const url =
+      "https://niche-server-side-project-assignment-12.vercel.app/orders";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

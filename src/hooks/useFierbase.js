@@ -96,7 +96,7 @@ const useFirebase = () => {
   // Get admin status
   useEffect(() => {
     if (user.email) {
-      const url = `http://localhost:5000/users/${user.email}`;
+      const url = `https://niche-server-side-project-assignment-12.vercel.app/users/${user.email}`;
       fetch(url)
         .then((res) => res.json())
         .then((data) => setAdmin(data.admin));
@@ -106,7 +106,8 @@ const useFirebase = () => {
   // saveUser
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    const url = "http://localhost:5000/users";
+    const url =
+      "https://niche-server-side-project-assignment-12.vercel.app/users";
     fetch(url, {
       method: method,
       headers: {

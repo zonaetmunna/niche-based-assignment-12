@@ -7,7 +7,8 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const url = "http://localhost:5000/products";
+    const url =
+      "https://niche-server-side-project-assignment-12.vercel.app/products";
     fetch(url, {
       method: "POST",
       headers: {

@@ -15,7 +15,8 @@ import React, { useEffect, useState } from "react";
 const ManageP = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:5000/products";
+    const url =
+      "https://niche-server-side-project-assignment-12.vercel.app/products";
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

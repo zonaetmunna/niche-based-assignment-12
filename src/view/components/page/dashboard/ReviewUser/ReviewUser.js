@@ -8,7 +8,8 @@ const ReviewUser = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    const url = "http://localhost:5000/review";
+    const url =
+      "https://niche-server-side-project-assignment-12.vercel.app/review";
     fetch(url, {
       method: "POST",
       headers: {

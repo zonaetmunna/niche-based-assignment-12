@@ -14,7 +14,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    const url = `http://localhost:5000/orders/specific?email=${user.email}`;
+    const url = `https://niche-server-side-project-assignment-12.vercel.app/orders/specific?email=${user.email}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())

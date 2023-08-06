@@ -14,7 +14,7 @@ const MakeAdmin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { email };
-    const url = `http://localhost:5000/users/admin`;
+    const url = `https://niche-server-side-project-assignment-12.vercel.app/users/admin`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -5,7 +5,8 @@ import Rating from "react-rating";
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    const url = "hhttp://localhost:5000/review";
+    const url =
+      "https://niche-server-side-project-assignment-12.vercel.app/review";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setReviews(data));
