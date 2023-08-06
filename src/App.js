@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./view/components/PrivateRoute/PrivateRoute";
+import Footer from "./view/components/common/Footer/Footer";
+import Header from "./view/components/common/Header/Header";
 import AddProduct from "./view/components/page/dashboard/AddProduct/AddProduct";
 import MakeAdmin from "./view/components/page/dashboard/MakeAdmin/MakeAdmin";
 import AllOrders from "./view/components/page/dashboard/ManageOrders/AllOrders";
@@ -19,7 +21,7 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
@@ -51,7 +53,7 @@ function App() {
             <Route path="manageProducts" element={<ManageP />} />
           </Route>
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </AuthProvider>
   );
